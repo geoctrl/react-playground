@@ -1,0 +1,68 @@
+@use "color" as *;
+
+// root
+$root-font-size: 62.5%;
+
+// base
+$base-font-family: Manrope, inter, Helvetica, Arial, sans-serif;
+$base-font-family-mono: Hack, mono;
+$base-font-size: 1.4rem;
+$base-font-weight: 400;
+$base-line-height: 1.4;
+
+// header
+$header-height: 5rem;
+
+
+// z-index helpers
+$z-backdrop: 400;
+$z-active: 500;
+
+// $form
+// ---------------------------
+$form-focus-state: 0 0 0 4px rgba($blue-crayola, 0.4);
+$form-focus-error-state: 0 0 0 4px rgba($vermillion, 0.4);
+$form-focus-state-inset: inset 0 0 0 4px rgba($blue-crayola, 0.4);
+$form-focus-state-dark: 0 0 0 4px rgba(255, 255, 255, 0.4);
+$form-focus-state-dark-inset: inset 0 0 0 4px rgba(255, 255, 255, 0.4);
+$form-transition-duration: 100ms;
+
+$form-size-sm: 3.6rem;
+$form-size-md: 4.4rem;
+
+$form-text-sm: 1.4rem;
+$form-text-md: 1.4rem;
+
+$form-padding-sm: 1.6rem;
+$form-padding-md: 1.8rem;
+
+// border radius
+$border-radius-xs: .4rem;
+$border-radius-sm: .6rem;
+$border-radius-md: .8rem;
+$border-radius-lg: 1.2rem;
+$border-radius-xl: 1.6rem;
+$border-radius-xxl: 2rem;
+$border-radius-full: 100vh;
+
+// box-shadow
+// ---------------------------
+$shadow-xs: 0 1px 2px rgba($raisin-900, 0.15);
+$shadow-sm: (
+  0px 1px 3px rgba($raisin-900, 0.2),
+  0px 1px 2px rgba($raisin-900, 0.16),
+);
+$shadow-md: (
+  0px 4px 8px -2px rgba($raisin-900, 0.2),
+  0px 2px 4px -2px rgba($raisin-900, 0.16),
+);
+$shadow-lg: (
+  0px 12px 16px -4px rgba($raisin-900, 0.18),
+  0px 4px 6px -2px rgba($raisin-900, 0.13),
+);
+$shadow-xl: (
+  0px 20px 24px -4px rgba($raisin-900, 0.18),
+  0px 8px 8px -4px rgba($raisin-900, 0.13),
+);
+// button-specific shadow
+$shadow-btn: 0px 2px 5px rgba(45, 0, 221, 0.06);

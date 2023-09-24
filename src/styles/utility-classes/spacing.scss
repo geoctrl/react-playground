@@ -1,0 +1,55 @@
+@use "sass:math";
+@use "../tools/breakpoints" as *;
+
+// margin, padding, gap
+$sizes: 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40;
+@each $value in $sizes {
+  $scale: math.div($value, 10);
+  .m-#{$value} { margin: #{$scale}rem !important; }
+  .mt-#{$value} { margin-top: #{$scale}rem !important; }
+  .ml-#{$value} { margin-left: #{$scale}rem !important; }
+  .mr-#{$value} { margin-right: #{$scale}rem !important; }
+  .mb-#{$value} { margin-bottom: #{$scale}rem !important; }
+  .mh-#{$value} { margin-left: #{$scale}rem !important; margin-right: #{$scale}rem !important; }
+  .mv-#{$value} { margin-top: #{$scale}rem !important; margin-bottom: #{$scale}rem !important; }
+
+  // padding
+  .p-#{$value} { padding: #{$scale}rem !important; }
+  .pt-#{$value} { padding-top: #{$scale}rem !important; }
+  .pl-#{$value} { padding-left: #{$scale}rem !important; }
+  .pr-#{$value} { padding-right: #{$scale}rem !important; }
+  .pb-#{$value} { padding-bottom: #{$scale}rem !important; }
+  .ph-#{$value} { padding-left: #{$scale}rem !important; padding-right: #{$scale}rem !important; }
+  .pv-#{$value} { padding-top: #{$scale}rem !important; padding-bottom: #{$scale}rem !important; }
+
+  .gap-#{$value} { gap: #{$scale}rem; }
+};
+
+.button-group {
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column-reverse;
+
+  @include breakpoint(lg) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.button-group-desktop {
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-group-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.page {
+  padding: 2.4rem;
+}

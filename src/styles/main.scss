@@ -1,0 +1,41 @@
+@use "reboot";
+@use "color" as *;
+@use "css-vars";
+@use "tools/keyboard-intent";
+@use "utility-classes/spacing";
+@use "utility-classes/text";
+@use "utility-classes/color-utility";
+@use "utility-classes/font-weight";
+@use "utility-classes/position";
+
+// overrides
+body {
+  .yarl__toolbar {
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .yarl__slide_image {
+    -webkit-touch-callout: default;
+  }
+
+  .yarl__slide {
+    padding: 0;
+  }
+
+  .yarl__button {
+    filter: none;
+    -webkit-filter: none;
+  }
+
+  .tester {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+}

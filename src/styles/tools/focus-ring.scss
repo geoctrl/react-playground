@@ -1,0 +1,61 @@
+@use '../color' as *;
+
+@mixin ring {
+  border: solid .2rem $violet;
+}
+
+@mixin focus-ring-after {
+  &::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+    border: solid .2rem transparent;
+    pointer-events: none;
+    @content;
+  }
+}
+
+@mixin focus-ring-after-focus {
+  outline: none;
+  &::after {
+    inset: 0;
+    @include ring;
+    pointer-events: none;
+    @content;
+  }
+}
+
+@mixin focus-ring {
+  @include focus-ring-after {
+    @content;
+  };
+  &:focus {
+    @include focus-ring-after-focus {
+      @content
+    };
+  }
+}
+
+@mixin focus-ring-within {
+  @include focus-ring-after {
+    @content;
+  };
+  &:focus-within {
+    @include focus-ring-after-focus {
+      @content
+    };
+  }
+}
+
+
+@mixin focus-ring-extend {
+  &:focus::after {
+    @content;
+  }
+}
+
+@mixin focus-ring-within-extend {
+  &:focus-within::after {
+    @content;
+  }
+}
